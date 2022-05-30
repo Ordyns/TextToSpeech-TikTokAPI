@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AA37F7C5-2D68-4B6D-9720-B40D2AD3CD31}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TikTokTTS</RootNamespace>
+    <AssemblyName>TikTokTTS</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>app_icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="netstandard" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="History.cs" />
+    <Compile Include="LoadingContentDialog.xaml.cs">
+      <DependentUpon>LoadingContentDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ModernWPF\BindableBase.cs" />
+    <Compile Include="ModernWPF\DispatcherHelper.cs" />
+    <Compile Include="ModernWPF\ModernWPF.SampleApp.Common\ActivityFeedLayout.cs" />
+    <Compile Include="ModernWPF\ModernWPF.SampleApp.Common\BooleanToValueConverter.cs" />
+    <Compile Include="ModernWPF\ModernWPF.SampleApp.Common\BrushToColorConverter.cs" />
+    <Compile Include="ModernWPF\ModernWPF.SampleApp.Common\Category.cs" />
+    <Compile Include="ModernWPF\ModernWPF.SampleApp.Common\Converters\ColorToBrushConverter.cs" />
+    <Compile Include="ModernWPF\ModernWPF.SampleApp.Common\Converters\EnumValuesConverter.cs" />
+    <Compile Include="ModernWPF\ModernWPF.SampleApp.Common\Converters\PixelsToGridLengthConverter.cs" />
+    <Compile Include="ModernWPF\ModernWPF.SampleApp.Common\CornerRadiusToDoubleConverter.cs" />
+    <Compile Include="ModernWPF\ModernWPF.SampleApp.Common\DynamicResourceHelper.cs" />
+    <Compile Include="ModernWPF\ModernWPF.SampleApp.Common\EqualsConverter.cs" />
+    <Compile Include="ModernWPF\ModernWPF.SampleApp.Common\Extensions.cs" />
+    <Compile Include="ModernWPF\ModernWPF.SampleApp.Common\FontIconExtension.cs" />
+    <Compile Include="ModernWPF\ModernWPF.SampleApp.Common\InverseAppThemeConverter.cs" />
+    <Compile Include="ModernWPF\ModernWPF.SampleApp.Common\InvertThemeConverter.cs" />
+    <Compile Include="ModernWPF\ModernWPF.SampleApp.Common\ItemCountConverter.cs" />
+    <Compile Include="ModernWPF\ModernWPF.SampleApp.Common\MenuItemTemplateSelector.cs" />
+    <Compile Include="ModernWPF\ModernWPF.SampleApp.Common\SolidColorBrushToColorStringConverter.cs" />
+    <Compile Include="ModernWPF\ModernWPF.SampleApp.Common\StaticResourceHelper.cs" />
+    <Compile Include="ModernWPF\ModernWPF.SampleApp.Common\WindowExtensions.cs" />
+    <Compile Include="ModernWPF\ModernWPF.SampleApp.Common\WindowPlacement.cs" />
+    <Compile Include="ModernWPF\ThemeManagerProxy.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="SettingsPage.xaml.cs">
+      <DependentUpon>SettingsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewModel.cs" />
+    <Compile Include="TextToSpeech.cs" />
+    <Compile Include="TextToSpeechOperation.cs" />
+    <Compile Include="ThreadedUI\ThreadedProgressBar.xaml.cs">
+      <DependentUpon>ThreadedProgressBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ThreadedUI\ThreadedProgressRing.xaml.cs">
+      <DependentUpon>ThreadedProgressRing.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ThreadedUI\ThreadedVisualHost.cs" />
+    <Compile Include="ThreadedUI\ThreadedVisualHostBase.cs" />
+    <Compile Include="ThreadedUI\VisualTargetPresentationSource.cs" />
+    <Page Include="HistoryPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LoadingContentDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HistoryPage.xaml.cs">
+      <DependentUpon>HistoryPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="SettingsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ThreadedUI\ThreadedProgressBar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ThreadedUI\ThreadedProgressRing.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="ModernWpfUI">
+      <Version>0.9.4</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>13.0.1</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\replay_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\close_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\copy_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ModernWPF\ModernWPF.SampleApp.Common\Primitives\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\home_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\history_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\file_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\play_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\app_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="app_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="app_icon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
