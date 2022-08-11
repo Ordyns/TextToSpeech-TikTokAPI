@@ -16,15 +16,15 @@ namespace TikTokTTS
     {
         public static MainWindow Instance;
 
+        public MainPage MainPage { get; } = new MainPage();
+        public HistoryPage HistoryPage { get; } = new HistoryPage();
+        public SettingsPage SettingsPage { get; } = new SettingsPage();
+
         public MainWindow()
         {
             InitializeComponent();
             Instance = this;
         }
-
-        public MainPage MainPage = new MainPage();
-        public HistoryPage HistoryPage = new HistoryPage();
-        public SettingsPage SettingsPage = new SettingsPage();
 
         private void Window_Loaded(object sender, RoutedEventArgs e) {
             ThemeManagerProxy.Current.AccentColor = Color.FromRgb(0, 132, 255);
@@ -36,8 +36,6 @@ namespace TikTokTTS
 
         public void MoveToHistoryPage()
         {
-            HistoryPage.UpdateContent();
-
             NavigationView.SelectedItem = GetItemByTagFromNavigationMenu(nameof(HistoryPage));
             ContentFrame.Navigate(HistoryPage);
         }

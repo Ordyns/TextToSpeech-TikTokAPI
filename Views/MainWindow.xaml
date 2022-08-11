@@ -3,14 +3,12 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:TikTokTTS"
-        xmlns:sample="clr-namespace:ModernWpf.SampleApp.Common"
         mc:Ignorable="d"
         Title="Text to speech - TikTokAPI" Height="450" Width="800" Loaded="Window_Loaded"
         xmlns:ui="http://schemas.modernwpf.com/2019"
         ResizeMode="CanMinimize"
         ui:WindowHelper.UseModernWindowStyle="True"
-        ui:ThemeManager.RequestedTheme="Dark" Background="#FF252525" Icon="app_icon.png">
+        ui:ThemeManager.RequestedTheme="Dark" Background="#FF252525" Icon="/app_icon.ico">
     
     <Grid>
         <Grid VerticalAlignment="Top">

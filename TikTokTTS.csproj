@@ -63,8 +63,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="History.cs" />
-    <Compile Include="LoadingContentDialog.xaml.cs">
+    <Compile Include="Models\History.cs" />
+    <Compile Include="Models\HistorySaveSystem.cs" />
+    <Compile Include="ViewModels\HistoryViewModel.cs" />
+    <Compile Include="Views\LoadingContentDialog.xaml.cs">
       <DependentUpon>LoadingContentDialog.xaml</DependentUpon>
     </Compile>
     <Compile Include="ModernWPF\BindableBase.cs" />
@@ -90,13 +92,13 @@
     <Compile Include="ModernWPF\ModernWPF.SampleApp.Common\WindowExtensions.cs" />
     <Compile Include="ModernWPF\ModernWPF.SampleApp.Common\WindowPlacement.cs" />
     <Compile Include="ModernWPF\ThemeManagerProxy.cs" />
-    <Compile Include="Settings.cs" />
-    <Compile Include="SettingsPage.xaml.cs">
+    <Compile Include="Models\SettingsSaveSystem.cs" />
+    <Compile Include="ViewModels\MainPageViewModel.cs" />
+    <Compile Include="Views\SettingsPage.xaml.cs">
       <DependentUpon>SettingsPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="SettingsViewModel.cs" />
-    <Compile Include="TextToSpeech.cs" />
-    <Compile Include="TextToSpeechOperation.cs" />
+    <Compile Include="ViewModels\SettingsViewModel.cs" />
+    <Compile Include="Models\TextToSpeech.cs" />
     <Compile Include="ThreadedUI\ThreadedProgressBar.xaml.cs">
       <DependentUpon>ThreadedProgressBar.xaml</DependentUpon>
     </Compile>
@@ -106,19 +108,20 @@
     <Compile Include="ThreadedUI\ThreadedVisualHost.cs" />
     <Compile Include="ThreadedUI\ThreadedVisualHostBase.cs" />
     <Compile Include="ThreadedUI\VisualTargetPresentationSource.cs" />
-    <Page Include="HistoryPage.xaml">
+    <Compile Include="ViewModels\ViewModelBase.cs" />
+    <Page Include="Views\HistoryPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="LoadingContentDialog.xaml">
+    <Page Include="Views\LoadingContentDialog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MainPage.xaml">
+    <Page Include="Views\MainPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MainWindow.xaml">
+    <Page Include="Views\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -126,17 +129,17 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="HistoryPage.xaml.cs">
+    <Compile Include="Views\HistoryPage.xaml.cs">
       <DependentUpon>HistoryPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MainPage.xaml.cs">
+    <Compile Include="Views\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
+    <Compile Include="Views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="SettingsPage.xaml">
+    <Page Include="Views\SettingsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -193,9 +196,6 @@
     <Resource Include="Resources\copy_icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="ModernWPF\ModernWPF.SampleApp.Common\Primitives\" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Resources\home_icon.png" />
   </ItemGroup>
   <ItemGroup>
@@ -209,9 +209,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\app_icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="app_icon.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="app_icon.ico" />
