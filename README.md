@@ -27,7 +27,7 @@ Languages
 
 History
 =======
-By default, the program saves all operations to a .json file. (path: *C:\Users\[USER]\AppData\Local\TikTokTTS*)
+By default, the program saves all operations to a .json file (path: *C:\Users\\[USER]\AppData\Local\TikTokTTS*).  
 On startup the application loads the last session. This feature can be disabled in the settings.
 
-![TikTokTTS_nl7Ar2kHYs](https://user-images.githubusercontent.com/88380021/170980539-c7b5843f-1c64-4239-a12e-077c1108f2ac.png)
+![history](https://user-images.githubusercontent.com/88380021/184322369-90f907bc-e9ac-4494-b82b-e4bb6fc5d462.png)
