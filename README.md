@@ -5,8 +5,37 @@ This is a small .NET Framework WPF program that uses the TikTok API. Application
 **Requirements:**
 * Windows 10
 * Windows 7 with installed .NET Framework 4.6 or newer
----
-![TikTokTTS_SJiZH0cMeu](https://user-images.githubusercontent.com/88380021/170978763-4d281720-bbb8-4f23-b3ca-8ec6898ab6c3.png)
+
+How to use?
+===========
+I. Installation
+---------------
+1) Download release (TikTokTTS.[version].zip)  
+2) Extract all files into one folder (folder can be placed anywhere)   
+3) Run "TikTokTTS.exe" 
+
+II. Usage
+---------
+![TikTokTTS_SJiZH0cMeu](https://user-images.githubusercontent.com/88380021/170978763-4d281720-bbb8-4f23-b3ca-8ec6898ab6c3.png)  
+
+• **Output path** - where the file will be saved. You can write the path yourself (the path must contain the file name and the extension (as in the screenshot)) or click on "•••" to select the path through the explorer.
+
+    
+• **Voice** - the voice that will be used to speech your text. 
+
+   Language    
+   │     
+   `en`_`au`__`001` ─ Variant number   
+        │    
+        Pronunciation   
+        
+The first two letters designate the language, the next two letters after the underscore (if they are) designate the pronunciation.
+        
+• **Text** - is the text that will be converted to speech.
+
+• **`Load from text file`** - you can select .txt file and load text from it    
+
+• Click `Start` to convert text to speech
 
 Languages
 =========
